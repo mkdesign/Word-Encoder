@@ -1,11 +1,11 @@
 var result= new Array();
 function encode(string){
 	var len = string.length;
-	var tmp,first, end, tmp2;
-	 tmp2= string;
+	var tmp,first, end;
+
 	first= string.charAt(0);
 	end= string.charAt(len-1);
-	tmp=string.substring(0,Math.ceil(len/2))+end+tmp2.substring((Math.ceil(len/2))+1,len-1)+first;
+	tmp=string.substr(0,Math.ceil(len/2))+end+string.substr((Math.ceil(len/2))+1,len-1)+first;
 	result.unshift(tmp);
 }
 
