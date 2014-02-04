@@ -1,6 +1,7 @@
 var enResult= new Array();
 var deResult= new Array();
-var lastBody;
+var lastBody = "";
+
 function body (array){
 	var len = array.length;
 	for(i=0;i<len;i++){
@@ -8,6 +9,7 @@ function body (array){
 	}
 	alert(lastBody);
 }
+
 function encode(string){
 	var len = string.length;
 	var tmp,first, end;
@@ -16,7 +18,6 @@ function encode(string){
 	end   = string.charAt(len-1);
 	tmp   = string.substr(0,Math.ceil(len/2))+end+string.substr(Math.ceil(len/2))+first;
 	enResult.push(tmp);
-
 }
 
 function decode(string){
@@ -31,11 +32,12 @@ function decode(string){
 }
 
 window.onload= function(){
+
 	var encodeBtn = document.getElementById('encode-btn');
 	var decodeBtn = document.getElementById('decode-btn');
 	var stack = new Array();
-	encodeBtn.onclick = function(){
 
+	encodeBtn.onclick = function(){
 		var str = document.getElementById('str').value;
 		stack   = str.split(" ");
 		var length = stack.length;
@@ -44,6 +46,7 @@ window.onload= function(){
 		}
 		body(enResult);
 	}
+
 	decodeBtn.onclick = function(){
 		var str = document.getElementById('str').value;
 		stack   = str.split(" ");
@@ -52,7 +55,6 @@ window.onload= function(){
 			decode(stack[i]);
 		}
 		body(deResult);
-		
 	}
 
 }
