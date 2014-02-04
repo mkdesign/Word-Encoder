@@ -5,7 +5,7 @@ function encode(string){
 
 	first= string.charAt(0);
 	end= string.charAt(len-1);
-	tmp=string.substr(0,Math.ceil(len/2))+end+string.substr((Math.ceil(len/2))+1,len-1)+first;
+	tmp=string.substr(0,Math.ceil(len/2))+end+string.substr((Math.ceil(len/2)))+first;
 	result.unshift(tmp);
 }
 
