@@ -8,21 +8,33 @@
 	bottom           : 0;
 	right:0;
 	left:0;
+	z-index: -1
 }
 
 .container{
-	position         : relative;
-	top              : 0;
-	bottom           : 0;
-	left             : 0;
-	right            : 0;
+	position         : absolute;
 	background-color : none;
+	top:0;
+	left: 0;
+	bottom: 0;
+	right:0;
 }
 
-section {
-	width    : 500px;
-	height   : 400px;
-	position : absolute;
-	top      : 0;
-	bottom   : 0;
+.container section {
+	width   : 500px;
+	height  : 100px;
+	position: absolute;
+	top     : 0;
+	bottom  : 0;
+	left    : 0;
+	right   : 0;
+	margin  : auto;
+	z-index : 4
+}
+section input#str {
+	display: block;
+	width: 400px;
+	padding: 10px 10px;
+	margin: 0 auto;
+	background-color: green;	
 }
