@@ -1,4 +1,13 @@
-var result= new Array();
+var enResult= new Array();
+var deResult= new Array();
+var lastBody;
+function body (array){
+	var len = array.length;
+	for(i=0;i<len;i++){
+		lastBody+=array[i]+" ";
+	}
+	alert(lastBody);
+}
 function encode(string){
 	var len = string.length;
 	var tmp,first, end;
@@ -6,7 +15,7 @@ function encode(string){
 	first = string.charAt(0);
 	end   = string.charAt(len-1);
 	tmp   = string.substr(0,Math.ceil(len/2))+end+string.substr(Math.ceil(len/2))+first;
-	result.push(tmp);
+	enResult.push(tmp);
 
 }
 
@@ -17,7 +26,7 @@ function decode(string){
 
 	end   = string.charAt(len-1);
 	tmp   = string.substr(0,mid)+string.slice(mid+1,-1);
-	result.push(tmp);
+	deResult.push(tmp);
 	
 }
 
@@ -33,7 +42,7 @@ window.onload= function(){
 		for(i=0;i<length;i++){
 			encode(stack[i]);
 		}
-		alert(result);
+		body(enResult);
 	}
 	decodeBtn.onclick = function(){
 		var str = document.getElementById('str').value;
@@ -42,8 +51,9 @@ window.onload= function(){
 		for(i=0;i<length;i++){
 			decode(stack[i]);
 		}
-		alert(result);
+		body(deResult);
 		
 	}
 
 }
+
