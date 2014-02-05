@@ -1,40 +1,97 @@
 .img{
-	position         : absolute;
-	background-image : url('images/1460970_603250563064147_1009011606_n.png');
-	background-repeat: no-repeat;
-	background-size  : cover;
-	-webkit-filter   : blur(5px);
-	top              : 0;
-	bottom           : 0;
-	right:0;
-	left:0;
-	z-index: -1
+	position          : absolute;
+	background-image  : url('images/StralsundCityHall_ROW8019013446_1366x768.jpg');
+	background-repeat : no-repeat;
+	background-size   : 100% 100%;
+	top               : 0;
+	bottom            : 0;
+	right             : 0;
+	left              : 0;
+	z-index           : -1;
+	-webkit-filter: blur(3px);
+}
+
+.clear{
+	clear      : both;
+	overflow   : hidden;
+	width      : 0 !important;
+	height     : 0 !important;
+	min-height : 0 !important;
+	min-width  : 0 !important;
+	border     : 0 none !important;
+	float      : none !important;
+}
+
+body, * {
+	font-family : "Helvetica Neue",sans-serif;
+	box-shadow  : 0 none;
 }
 
 .container{
-	position         : absolute;
+	width            : 950px;
 	background-color : none;
-	top:0;
-	left: 0;
-	bottom: 0;
-	right:0;
+	margin           : 0 auto;
+	padding-top      : 1px;
 }
 
 .container section {
-	width   : 500px;
-	height  : 100px;
-	position: absolute;
-	top     : 0;
-	bottom  : 0;
-	left    : 0;
-	right   : 0;
-	margin  : auto;
-	z-index : 4
+	width            : 500px;
+	background-color : white;
+	margin-top       : 150px;
+	padding          : 4px 0;
+	box-shadow       : 0 0 10px #ccc;
+	border-radius    : 5px;
+	margin-bottom    : 20px;
+}
+section input {
+	float : left;
+
 }
 section input#str {
-	display: block;
-	width: 400px;
-	padding: 10px 10px;
-	margin: 0 auto;
-	background-color: green;	
+	width            : 350px;
+	padding          : 15px 10px;
+	margin           : 0 auto;
+	background-color : white;
+	color            : #5F7883;
+	font-size        : 20px;
+	border-radius    : 5px;
+	border           : 0 none;
+}
+section input:focus {
+	outline : 0 none;
+}
+
+section input.btn {
+	background-color : white;
+	border           : 0 none;
+	border-radius    : 5px;
+	height           : 50px;
+	width            : 50px;
+	margin           : 0px 0 0 10px;
+	opacity          : 0.5;
+}
+
+section input#encode-btn {
+	background-image    : url('images/lock-50.png');
+	background-repeat   : no-repeat;
+	background-position : center center;
+}
+
+section input#decode-btn {
+	background-image    : url('images/unlock-50.png');
+	background-repeat   : no-repeat;
+	background-position : center;
+}
+
+p#result {
+	-webkit-transition : height 400ms;
+	font-size          : 20px;
+	background-color   : white;
+	width              : 490px;
+	border-radius      : 5px;
+	padding            : 5px;
+	opacity            : 0;
+	height             : 0;
+	color              : #5F7883;
+	box-shadow       : 0 0 10px #ccc;
 }

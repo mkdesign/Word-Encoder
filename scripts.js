@@ -2,12 +2,16 @@ var enResult= new Array();
 var deResult= new Array();
 var lastBody = "";
 
+
+
 function body (array){
 	var len = array.length;
 	for(i=0;i<len;i++){
 		lastBody+=array[i]+" ";
 	}
-	alert(lastBody);
+	document.getElementById('result').innerHTML=lastBody;
+	document.getElementById('result').style.opacity='1';
+	document.getElementById('result').style.height='inherit';
 }
 
 function encode(string){
