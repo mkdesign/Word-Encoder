@@ -38,7 +38,7 @@ function decode(string){
 window.onload= function(){
 	setTimeout(function(){
 		document.getElementsByClassName('img').item(0).style.webkitFilter='blur(3px)';
-		document.getElementsByClassName('container').item(0).style.marginTop=0;
+		document.getElementsByTagName('section').item(0).style.marginTop=150+'px';
 	},2000)
 
 	var encodeBtn = document.getElementById('encode-btn');
