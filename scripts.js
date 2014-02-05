@@ -36,6 +36,10 @@ function decode(string){
 }
 
 window.onload= function(){
+	setTimeout(function(){
+		document.getElementsByClassName('img').item(0).style.webkitFilter='blur(3px)';
+		document.getElementsByClassName('container').item(0).style.marginTop=0;
+	},2000)
 
 	var encodeBtn = document.getElementById('encode-btn');
 	var decodeBtn = document.getElementById('decode-btn');
