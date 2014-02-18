@@ -34,19 +34,21 @@ body, * {
 }
 
 .container section {
-	width            : 500px;
-	background-color : white;
-	margin-top       : -100%;
-	padding          : 4px 0;
-	box-shadow       : 0 0 10px #ccc;
-	border-radius    : 5px;
-	margin-bottom    : 20px;
-	-webkit-transition:all 800ms;
+	width              : 500px;
+	background-color   : white;
+	margin-top         : -100%;
+	padding            : 4px 0;
+	box-shadow         : 0 0 10px #ccc;
+	border-radius      : 5px;
+	margin-bottom      : 20px;
+	-webkit-transition : all 800ms;
 }
+
 section input {
 	float : left;
 
 }
+
 section input#str {
 	width            : 350px;
 	padding          : 15px 10px;
@@ -57,6 +59,7 @@ section input#str {
 	border-radius    : 5px;
 	border           : 0 none;
 }
+
 section input:focus {
 	outline : 0 none;
 }
@@ -93,5 +96,5 @@ p#result {
 	opacity            : 0;
 	height             : 0;
 	color              : #5F7883;
-	box-shadow       : 0 0 10px #ccc;
+	box-shadow         : 0 0 10px #ccc;
 }
